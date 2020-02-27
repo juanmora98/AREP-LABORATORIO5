@@ -12,14 +12,13 @@ import edu.escuelaing.arep.app.DB.DataBase;
 
 
 
-public class Servidor {
+public class Servidor implements Runnable{
 
     //Atributos
 
-    int puerto;
+
 
 //region Sockets
-    ServerSocket socketServidor;
     Socket socketCliente;
 //endregion
 
@@ -34,9 +33,17 @@ public class Servidor {
 
     private Map<String, Method> mapeoURL = new HashMap<String, Method>();
 
-    public Servidor(Map<String, Method> url){
+    public Servidor(Map<String, Method> url, ServerSocket socketServidor) throws IOException {
         this.mapeoURL = url;
+        socketCliente = socketServidor.accept();
     }
+
+    @Override
+    public void run() {
+        // TODO Auto-generated method stub
+
+    }
+
 
     /**
      * Metodo iniciador del servidor en el cual se realizan las distintas conexiones necesarias para generar las paginas y las imagenes
@@ -44,84 +51,53 @@ public class Servidor {
      */
     public void Start() throws IOException{
 
-        
-        while(true){
-            puerto = getPuerto();          
-            IniciadorAtributosConexion(puerto);
+        IniciadorAtributosConexion();
+        RealizadorConexionStream();
+        while ((inputLine = bufferedReader.readLine()) != null) {
+            if(inputLine.startsWith("GET")){
 
-            try {
-                
-                socketCliente = socketServidor.accept();
-
-            } catch (IOException e) {
-                System.err.println("Fallo al aceptar el puerto del cliente.");
-                System.exit(1);
-            }
-
-            RealizadorConexionStream();
-
-            while ((inputLine = bufferedReader.readLine()) != null) {
-                if(inputLine.startsWith("GET")){
-
-                    archivo = inputLine.substring(inputLine.indexOf("/") + 1, inputLine.indexOf("HTTP"));
-
-                }
-
-                if (!bufferedReader.ready()){
-
-                    break;
-
-                } 
-                
-            }
-
-            if(archivo.equals(" ")) {
-                archivo = "index.html";
+                archivo = inputLine.substring(inputLine.indexOf("/") + 1, inputLine.indexOf("HTTP"));
 
             }
 
-            if (archivo.equals("editores ")){
-                MostrarPaginaDB();
-            }
+            if (!bufferedReader.ready()){
 
-            else if (archivo.startsWith("api")){
-                MostrarPaginaAPI();
-            }
+                break;
+
+            } 
             
-            else if(!archivo.equals("/")){
-
-                CreacionArchivo();
-
-            }
-
-            printWriter.flush();
-            CerrarTodo();
         }
+
+        if(archivo.equals(" ")) {
+            archivo = "index.html";
+
+        }
+
+        if (archivo.equals("editores ")){
+            MostrarPaginaDB();
+        }
+
+        else if (archivo.startsWith("api")){
+            MostrarPaginaAPI();
+        }
+        
+        else if(!archivo.equals("/")){
+
+            CreacionArchivo();
+
+        }
+
+        printWriter.flush();
+        CerrarTodo();
     }
 
 
-    /**
-     * Metodo encargado de encontrar el puerto por el que se ara la conexion
-     * @return int que es el puerto para realizar la conexion
-     */
-    public int getPuerto(){
-        if (System.getenv("PORT") != null) {
-            return Integer.parseInt(System.getenv("PORT"));
-         }
-        return 4567;
-    }
 
     /**
      * Metodo iniciador del socket del servidor y de los distintos atributos necesarios para mostrar las imagenes y las paginas
      * @param puerto
      */
-    public void IniciadorAtributosConexion(int puerto){
-        try {
-            socketServidor = new ServerSocket(puerto);    
-        } catch (IOException e) {
-            System.err.println("No se realiza ninguna conexion por el puerto:" + puerto);
-            System.exit(1);
-        }
+    public void IniciadorAtributosConexion(){
         printWriter = null;
         bufferedReader = null;
         bufferedOutputStream = null;
@@ -306,7 +282,6 @@ public class Servidor {
         bufferedOutputStream.close();
         bufferedReader.close();
         socketCliente.close();
-        socketServidor.close();
 
     }
         
@@ -360,6 +335,8 @@ public class Servidor {
               "</html>";
            printWriter.println(outString);
      }
+
+
 
 
 }
