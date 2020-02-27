@@ -10,17 +10,13 @@ import java.util.Map;
 
 import edu.escuelaing.arep.app.DB.DataBase;
 
+public class Servidor implements Runnable {
 
+    // Atributos
 
-public class Servidor implements Runnable{
-
-    //Atributos
-
-
-
-//region Sockets
+    // region Sockets
     Socket socketCliente;
-//endregion
+    // endregion
 
     PrintWriter printWriter;
     BufferedReader bufferedReader;
@@ -40,8 +36,12 @@ public class Servidor implements Runnable{
 
     @Override
     public void run() {
-        // TODO Auto-generated method stub
-
+        try {
+            Start();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
 
