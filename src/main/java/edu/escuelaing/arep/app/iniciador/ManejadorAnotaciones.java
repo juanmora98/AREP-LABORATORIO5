@@ -19,7 +19,7 @@ public class ManejadorAnotaciones {
 
     /**
      * Metodo encargado de generar el path que sera utilizado para las busquedas de las anotaciones y asi mismo de la URL a buscar
-     * @return
+     * @return UrlHandler manejador
      */
     public static Map<String, Method> getPathClase() {
 
@@ -37,7 +37,7 @@ public class ManejadorAnotaciones {
 
     /**
      * Metodo encargado de verificar las clases que utilizaran una anotacion especifica que se encuentren en el empaquetado especifico
-     * @param clasesServidor
+     * @param clasesServidor clases del servidor
      */
     public static void VerificadorClasesUtiles(List<Class> clasesServidor) {
 
@@ -61,8 +61,8 @@ public class ManejadorAnotaciones {
 
     /**
      * Metodo encargado de generar el path a utilizar en la URL
-     * @param clasesServidor
-     * @param URLHandler
+     * @param clasesServidor clases del servidor
+     * @param URLHandler manejador
      */
     public static void GeneradorPath(List<Class> clasesServidor, Map<String, Method> URLHandler) {
         AnotacionServer anotacionServer;

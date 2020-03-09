@@ -39,7 +39,6 @@ public class Servidor implements Runnable {
         try {
             Start();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -47,7 +46,7 @@ public class Servidor implements Runnable {
 
     /**
      * Metodo iniciador del servidor en el cual se realizan las distintas conexiones necesarias para generar las paginas y las imagenes
-     * @throws IOException
+     * @throws IOException error
      */
     public void Start() throws IOException{
 
@@ -95,7 +94,6 @@ public class Servidor implements Runnable {
 
     /**
      * Metodo iniciador del socket del servidor y de los distintos atributos necesarios para mostrar las imagenes y las paginas
-     * @param puerto
      */
     public void IniciadorAtributosConexion(){
         printWriter = null;
@@ -157,7 +155,7 @@ public class Servidor implements Runnable {
     /**
      * Metodo utilizado para mostrar una pagina web con el contenido solicitado que no es tipo imagen
      * @param br buffered creado anteriormente
-     * @throws IOException
+     * @throws IOException error
      */
     public void MostrarPagina(BufferedReader br) throws IOException {
         String outString = 
@@ -287,9 +285,9 @@ public class Servidor implements Runnable {
         
     /**
      * metodo con el cual se genera la pagina para poder mostrar imagenes
-     * @param pagina
-     * @param formato
-     * @throws IOException
+     * @param pagina pagina web
+     * @param formato formato
+     * @throws IOException error
      */
     public void MostrarImagen(File pagina, String formato) throws IOException {
         
