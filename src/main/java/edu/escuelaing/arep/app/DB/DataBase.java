@@ -12,11 +12,11 @@ public class DataBase{
         String res = "";
         try {  
             Class.forName("org.postgresql.Driver");
-            String host = "ec2-34-200-116-132.compute-1.amazonaws.com";
-            String database = "d6768kis84tncl";
+            String host = "ec2-52-202-185-87.compute-1.amazonaws.com";
+            String database = "d8034dh4j9kgqd";
             String port = "5432";
-            String user = "brqpwcxlrpyphk";
-            String passwd = "42534f27ba7b1d5c22ae945d515588f09f98e532044cddcdac2ea38e63dda50c";
+            String user = "xkpkuliigtmwfy";
+            String passwd = "9c391d9b069e561fecd88d75a893c97f487885d6b78533d97b4bf81733f6b4f7";
             Connection con = DriverManager.getConnection( "jdbc:postgresql://"+ host + ":" + port + "/" + database, user, passwd);
             Statement stmt=con.createStatement();  
             ResultSet rs=stmt.executeQuery("select * from editores");
