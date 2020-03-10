@@ -24,7 +24,9 @@ Laboratorio realizado con la intención de que los estudiantes utilicen los los 
 El pdf añadido de nombre [Lab5](https://github.com/juanmora98/AREP-LABORATORIO4/blob/master/lab4.pdf) se encuentra el diseño del proyecto.
 
 # JavaDoc
-[Documentacion](https://github.com/juanmora98/AREP-LABORATORIO4/tree/master/apidocs) al darle click, se abrira la carpeta donde se encuentra los archivos generados por el javadocs.
+[Documentacion](https://github.com/juanmora98/AREP-LABORATORIO5/tree/master/documents/apidocs) al darle click, se abrira la carpeta donde se encuentra los archivos generados por el javadocs.
+
+Asi mismo el archivo [Trabajo Realizado] (https://github.com/juanmora98/AREP-LABORATORIO5/blob/master/documents/Taller%20de%20introducci%C3%B3n%20a%20AWS%20y%20modularizaci%C3%B3n%20por%20virtualizaci%C3%B3n.pdf) al darle click, se abrira la carpeta donde se encuentra el trabajo realizado con AWS.
 
 ## Construido
 * [maven] - manejador de dependencias
