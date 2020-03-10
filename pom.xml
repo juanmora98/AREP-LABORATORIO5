@@ -42,7 +42,7 @@
       <configuration>
         <archive>
           <manifest>
-            <mainClass>escuelaing.arep.app.cliente.MainCliente</mainClass>
+            <mainClass>edu.escuelaing.arep.app.cliente.MainCliente</mainClass>
           </manifest>
         </archive>
       </configuration>

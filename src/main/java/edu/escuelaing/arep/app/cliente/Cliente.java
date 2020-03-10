@@ -8,11 +8,13 @@ import java.net.*;
 public class Cliente implements Runnable { 
 
   //Atributos
-  private String[] pagina;
+  private String pagina;
+  private long tiempo;
 
 
-public Cliente(String[] pagina){
+public Cliente(String pagina, long tiempo){
   this.pagina = pagina;
+  this.tiempo = tiempo;
 }
 
 
@@ -29,7 +31,7 @@ public Cliente(String[] pagina){
 
 
   public void AnalisisPagina() throws MalformedURLException {
-    URL url = new URL(pagina[0]); 
+    URL url = new URL(pagina); 
     try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()))) 
     { 
       String inputLine = null; 
@@ -40,6 +42,11 @@ public Cliente(String[] pagina){
     } catch (IOException x) { 
              System.err.println(x); 
     } 
+    
+    long tiempoTermino = System.nanoTime();
+    System.out.println("Tiempo de ejecucion :" + (double)((tiempoTermino - tiempo) / 1000000000.0));
+    
+    
   }
 
 

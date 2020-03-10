@@ -6,9 +6,9 @@ public class MainCliente{
 
 
     public static void main(String[] args) {
-
-        IniciadorThreadsCliente iniciadorThreadsCliente = new IniciadorThreadsCliente(10);
-        iniciadorThreadsCliente.Iniciar(args);
+        int numeroThreads = Integer.parseInt(args[0]);
+        IniciadorThreadsCliente iniciadorThreadsCliente = new IniciadorThreadsCliente(numeroThreads);
+        iniciadorThreadsCliente.Iniciar("https://secure-garden-73536.herokuapp.com");
         
     }
 

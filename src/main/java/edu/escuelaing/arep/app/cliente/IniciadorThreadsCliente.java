@@ -13,10 +13,12 @@ public class IniciadorThreadsCliente{
         this.tamanioPool = tamanioPool;
       }
     
-      public void Iniciar(String[] args) {
+      public void Iniciar(String args) {
+          long tiempoDuracion = System.nanoTime();
           for (int i = 0; i < tamanioPool; i++) {
-            executorService.execute(new Cliente(args));
+            executorService.execute(new Cliente(args, tiempoDuracion));
           }
+          executorService.shutdown();
       }
 
 
