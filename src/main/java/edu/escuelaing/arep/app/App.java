@@ -5,7 +5,7 @@ import java.io.IOException;
 import edu.escuelaing.arep.app.iniciador.IniciadorThreadServer;
 
 /**
- * Hello world!
+ * Metodo main de el proceso para la generacion del servidor
  *
  */
 public class App {

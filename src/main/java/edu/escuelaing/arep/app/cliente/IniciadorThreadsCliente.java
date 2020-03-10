@@ -8,11 +8,20 @@ public class IniciadorThreadsCliente{
     private ExecutorService executorService;
     public int tamanioPool;
 
+    /**
+     * Metodo encargado de inicializar la pool de los threads del cliente
+     * @param tamanioPool 
+     */
     public IniciadorThreadsCliente(int tamanioPool) {
         executorService = Executors.newFixedThreadPool(tamanioPool);
         this.tamanioPool = tamanioPool;
       }
     
+    
+    /**
+     * metodo encargado de iniciar todos los threads solicitados
+     * @param args 
+     */
       public void Iniciar(String args) {
           long tiempoDuracion = System.nanoTime();
           for (int i = 0; i < tamanioPool; i++) {
