@@ -23,7 +23,7 @@ Para continuar con el continuo plan de aprendizaje, debemos implementar de maner
    * [java]
   
 # Diseño
-El pdf añadido de nombre [Lab5](https://github.com/juanmora98/AREP-LABORATORIO4/blob/master/lab4.pdf) se encuentra el diseño del proyecto.
+El pdf añadido de nombre [Lab5](https://github.com/juanmora98/AREP-LABORATORIO5/blob/master/documents/lab5.pdf) se encuentra el diseño del proyecto.
 
 # JavaDoc
 [Documentacion](https://github.com/juanmora98/AREP-LABORATORIO5/tree/master/documents/apidocs) al darle click, se abrira la carpeta donde se encuentra los archivos generados por el javadocs.
