@@ -12,6 +12,8 @@ Laboratorio 05 de la materia Arquitecturas empresariales dictada en la Escuela C
 
 Laboratorio realizado con la intención de que los estudiantes utilicen los los modulos de maven y asi mismo el lenguaje de programacion java, logren aprender formas para crear servidores y clientes para realizar distintos procesos en estos servidores y que los clientes puedan usarlo, de esta manera logren crear una pagina web que ofrezca un servicio y pueda ser consultado en linea, este con el uso de hilos (threads) ara que el servicio sea concurrente y asi puedan hacerse muchas solicitudes a este en paralelo. 
 
+Para continuar con el continuo plan de aprendizaje, debemos implementar de manera adecuada el uso de AWS con uno de sus servicios llamado EC2, asi lograr montar nuestro cliente en el y poder utilizarlo.
+
 
 # Como Iniciar
  # - Prerequisitos
