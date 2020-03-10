@@ -1,7 +1,7 @@
 # AREP-LABORATORIO5
 
 [![Heroku](https://heroku-badge.herokuapp.com/?app=mighty-ocean-00668)](https://secure-garden-73536.herokuapp.com)
-[![CircleCI](https://circleci.com/gh/juanmora98/AREP-Laboratorio3-Reto1-Reto2.svg?style=svg)](https://circleci.com/gh/juanmora98/AREP-LABORATORIO4)
+[![CircleCI](https://circleci.com/gh/juanmora98/AREP-Laboratorio3-Reto1-Reto2.svg?style=svg)](https://circleci.com/gh/juanmora98/AREP-LABORATORIO5)
 [![Maven Central](https://img.shields.io/maven-central/v/org.apache.maven.plugins/maven-compiler-plugin/3.8.0)](https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin/3.8.0)
 [![Maven Central](https://img.shields.io/maven-central/v/org.apache.maven.plugins/maven-dependency-plugin/3.0.1)](https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin/3.0.1)
 [![Maven Central](https://img.shields.io/maven-central/v/org.apache.maven.plugins/maven-javadoc-plugin)](https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin)
@@ -12,8 +12,6 @@ Laboratorio 05 de la materia Arquitecturas empresariales dictada en la Escuela C
 
 Laboratorio realizado con la intención de que los estudiantes utilicen los los modulos de maven y asi mismo el lenguaje de programacion java, logren aprender formas para crear servidores y clientes para realizar distintos procesos en estos servidores y que los clientes puedan usarlo, de esta manera logren crear una pagina web que ofrezca un servicio y pueda ser consultado en linea, este con el uso de hilos (threads) ara que el servicio sea concurrente y asi puedan hacerse muchas solicitudes a este en paralelo. 
 
-# Pagina Heroku con data base
-https://frozen-journey-74293.herokuapp.com/editores
 
 # Como Iniciar
  # - Prerequisitos
